@@ -1,0 +1,360 @@
+/* Estilos generales */
+@import url("https://use.typekit.net/bmw1dvs.css");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&display=swap");
+
+/* Colores principales */
+:root {
+  --color-primario: rgb(38, 34, 98);
+  --color-secundario: rgb(28, 117, 188);
+  --color-acento: rgb(144, 198, 113);
+  --color-claro: rgb(54, 153, 124);
+  --color-oscuro: rgb(22, 88, 183);
+  --color-verde-claro: rgb(195, 219, 109);
+  --color-marron: rgb(91, 145, 47);
+  --color-turquesa: rgb(28, 188, 191);
+  --color-verde-oscuro: rgb(4, 130, 130);
+  --color-amarillo: rgb(235, 177, 69);
+  --font-family: "Barlow", sans-serif;
+  --font-style: normal;
+  --font-weight: 400;
+}
+html.w-mod-touch * {
+  background-attachment: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "barlow", sans-serif;
+}
+
+.header {
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.012);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.nav-left a,
+.nav-right a {
+  font-family: "myriad pro", sans-serif;
+  font-weight: 200;
+  color: var(--color-primario);
+  margin: 0 10px; /* Añade margen horizontal */
+  padding: 5px 10px; /* Añade padding para aumentar el área clickeable */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+  color: var(--color-amarillo);
+}
+
+.nav-center {
+  display: flexbox;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-center h1 {
+  font-size: 38px;
+  font-weight: 300;
+  color: var(--color-primario);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0 20px; /* Añade margen al título central */
+}
+
+/* Si desea más espacio entre los grupos de navegación */
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left {
+  margin-right: 20px; /* Añade espacio a la derecha de nav-left */
+}
+
+.nav-right {
+  margin-left: 20px; /* Añade espacio a la izquierda de nav-right */
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 66vh;
+  width: 80%;
+  margin-top: 0;
+}
+.main-logo {
+  max-width: 80%;
+  margin-top: 0;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.slogan-container {
+  font-size: 18px;
+  line-height: 1;
+  font-family: "myriad pro", sans-serif;
+  line-height: 1;
+  scroll-behavior: auto;
+  font-weight: 200;
+  color: var(--color-amarillo);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slogan-container p {
+  margin: 10px 0;
+}
+
+/* Video de fondo */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  fill-opacity: black;
+  pointer-events: none;
+  filter: brightness(55%);
+}
+.sobre-nosotros-container {
+  background-image: url("assets/alga\ polimero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  height: 100vh;
+  width: 100vw;
+}
+.sobre-nosotros-content {
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+.misionyvision {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.sobre-nosotros-content h2 {
+  font-size: 38px;
+  font-weight: 500;
+  color: var(--color-primario);
+  text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+
+.sobre-nosotros-content p {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--color-primario);
+  text-shadow: 2px 2px 4px rgb(229, 215, 215);
+}
+.misionyvision h3 {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--color-primario);
+  text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+.mision p,
+.vision p {
+  color: var(--color-primario);
+  font-size: 18px;
+  font-weight: 200;
+  color: var(--color-secundario);
+  text-shadow: 2px 2px 4px rgb(205, 211, 219);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.home-page-section-a {
+  padding: 40px 50px;
+  background-image: url("assets/alga\ matraz.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  max-height: 50%;
+  max-width: 100%;
+}
+.home-page-section-b {
+  padding: 40px 50px;
+  background-image: url("assets/ciencia alga.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  max-height: 50%;
+  max-width: 100%;
+}
+.home-page-section-c {
+  padding: 40px 50px;
+  background-image: url("assets/alga vaso.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  max-height: 50%;
+  max-width: 100%;
+}
+.w-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+  background-attachment: scroll;
+}
+
+.home-page-swap-position {
+  direction: ltr;
+}
+
+.home-page-swap-position > * {
+  direction: ltr;
+}
+
+.home-page-content-image img {
+  width: 70%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.home-page-content-a,
+.home-page-content-b {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-page-content-title h2 {
+  font-size: 38px;
+  color: #071a83;
+  margin-bottom: 10px;
+  text-shadow: 2px -1px 2px rgba(249, 249, 249, 0.928);
+}
+
+.home-page-content-a p,
+.home-page-content-b p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #a5eabc;
+  text-shadow: 2px -1px 2px rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .w-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page-swap-position {
+    direction: ltr;
+  }
+}
+.parallax-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%; /* Altura extra para el efecto parallax */
+  background-image: url("assets/alga polimero.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+}
+
+.parallax-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+
+.parallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.sobre-nosotros-container {
+  position: relative;
+  height: 100vh; /* Ajusta según tus necesidades */
+  perspective: 1px;
+  transform-style: preserve-3d;
+}
+
+.sobre-nosotros-content {
+  position: relative;
+  padding: 50px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fondo semi-transparente para mejorar la legibilidad */
+  transform: translateZ(0);
+}
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+.logo-footer img {
+  width: 30%;
+}
+.logo-jr img {
+  scrollbar-shadow-color: #13bb72;
+  width: 10%;
+  height: 10%;
+}
