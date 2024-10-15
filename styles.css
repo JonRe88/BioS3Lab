@@ -1,360 +1,591 @@
-/* Estilos generales */
-@import url("https://use.typekit.net/bmw1dvs.css");
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
 
-/* Colores principales */
-:root {
-  --color-primario: rgb(38, 34, 98);
-  --color-secundario: rgb(28, 117, 188);
-  --color-acento: rgb(144, 198, 113);
-  --color-claro: rgb(54, 153, 124);
-  --color-oscuro: rgb(22, 88, 183);
-  --color-verde-claro: rgb(195, 219, 109);
-  --color-marron: rgb(91, 145, 47);
-  --color-turquesa: rgb(28, 188, 191);
-  --color-verde-oscuro: rgb(4, 130, 130);
-  --color-amarillo: rgb(235, 177, 69);
-  --font-family: "Barlow", sans-serif;
-  --font-style: normal;
-  --font-weight: 400;
-}
-html.w-mod-touch * {
-  background-attachment: scroll;
+.root {
+    --color-primario: #3b82f6;
+    --color-secundario: #10b981;
+    --color-fondo: #f3f4f6;
+    --color-texto: #1f2937;
+    --color-primary: #06417c;
+    --color-secondary: #cbf1de9a;
+    --color-text: #ffffff;
+    --font-family: 'Barlow', serif;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "barlow", sans-serif;
+    color: var(--color-texto);
 }
 
-.header {
-  display: flex;
-  position: sticky;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.012);
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-}
-
-.nav-left a,
-.nav-right a {
-  font-family: "myriad pro", sans-serif;
-  font-weight: 200;
-  color: var(--color-primario);
-  margin: 0 10px; /* Añade margen horizontal */
-  padding: 5px 10px; /* Añade padding para aumentar el área clickeable */
-  text-decoration: none; /* Elimina el subrayado de los enlaces */
-}
-
-.nav-left a:hover,
-.nav-right a:hover {
-  color: var(--color-amarillo);
-}
-
-.nav-center {
-  display: flexbox;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-center h1 {
-  font-size: 38px;
-  font-weight: 300;
-  color: var(--color-primario);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin: 0 20px; /* Añade margen al título central */
-}
-
-/* Si desea más espacio entre los grupos de navegación */
-.nav-left,
-.nav-right {
-  display: flex;
-  align-items: center;
-}
-
-.nav-left {
-  margin-right: 20px; /* Añade espacio a la derecha de nav-left */
-}
-
-.nav-right {
-  margin-left: 20px; /* Añade espacio a la izquierda de nav-right */
-}
-
-.main-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  margin-bottom: 0;
-  text-align: center;
-}
-
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 66vh;
-  width: 80%;
-  margin-top: 0;
-}
-.main-logo {
-  max-width: 80%;
-  margin-top: 0;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-}
-
-.slogan-container {
-  font-size: 18px;
-  line-height: 1;
-  font-family: "myriad pro", sans-serif;
-  line-height: 1;
-  scroll-behavior: auto;
-  font-weight: 200;
-  color: var(--color-amarillo);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.slogan-container p {
-  margin: 10px 0;
-}
 
 /* Video de fondo */
+
 .background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  fill-opacity: black;
-  pointer-events: none;
-  filter: brightness(55%);
-}
-.sobre-nosotros-container {
-  background-image: url("assets/alga\ polimero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  height: 100vh;
-  width: 100vw;
-}
-.sobre-nosotros-content {
-  margin-top: 100px;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: 100px;
-  text-align: center;
-}
-.misionyvision {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-.sobre-nosotros-content h2 {
-  font-size: 38px;
-  font-weight: 500;
-  color: var(--color-primario);
-  text-shadow: 2px 2px 4px rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    fill-opacity: rgb(80, 78, 78);
+    filter: brightness(55%);
 }
 
-.sobre-nosotros-content p {
-  font-size: 18px;
-  font-weight: 300;
-  color: var(--color-primario);
-  text-shadow: 2px 2px 4px rgb(229, 215, 215);
-}
-.misionyvision h3 {
-  font-size: 28px;
-  font-weight: 500;
-  color: var(--color-primario);
-  text-shadow: 2px 2px 4px rgb(255, 255, 255);
-}
-.mision p,
-.vision p {
-  color: var(--color-primario);
-  font-size: 18px;
-  font-weight: 200;
-  color: var(--color-secundario);
-  text-shadow: 2px 2px 4px rgb(205, 211, 219);
+.main {
+    font-family: "Barlow", serif;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 10px;
+
+/* Diseño de cuadrícula y flexbox */
+
+.container-fluid img {
+    width: 20%;
+    height: 30%;
+    display: flex;
+    font-family: "Barlow", serif;
 }
 
-.home-page-section-a {
-  padding: 40px 50px;
-  background-image: url("assets/alga\ matraz.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  max-height: 50%;
-  max-width: 100%;
-}
-.home-page-section-b {
-  padding: 40px 50px;
-  background-image: url("assets/ciencia alga.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  max-height: 50%;
-  max-width: 100%;
-}
-.home-page-section-c {
-  padding: 40px 50px;
-  background-image: url("assets/alga vaso.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  max-height: 50%;
-  max-width: 100%;
-}
-.w-layout-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  align-items: center;
-  background-attachment: scroll;
+.grid {
+    display: grid;
+    warrreeeer gap: 10px;
 }
 
-.home-page-swap-position {
-  direction: ltr;
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.home-page-swap-position > * {
-  direction: ltr;
+
+/* Versión de escritorio */
+
+.hero img {
+    align-items: center;
+    margin-top: 0%;
+    height: auto;
+    width: 70%;
+    z-index: 1;
 }
 
-.home-page-content-image img {
-  width: 70%;
-  height: auto;
-  border-radius: 20px;
-}
-
-.home-page-content-a,
-.home-page-content-b {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.home-page-content-title h2 {
-  font-size: 38px;
-  color: #071a83;
-  margin-bottom: 10px;
-  text-shadow: 2px -1px 2px rgba(249, 249, 249, 0.928);
-}
-
-.home-page-content-a p,
-.home-page-content-b p {
-  font-size: 20px;
-  line-height: 1.6;
-  color: #a5eabc;
-  text-shadow: 2px -1px 2px rgb(0, 0, 0);
+.hero p {
+    font-family: 'Barlow', serif;
+    text-align: center;
+    margin-top: 0%;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 2rem;
+    color: rgb(102, 140, 130);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
 @media (max-width: 768px) {
-  .w-layout-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .home-page-swap-position {
-    direction: ltr;
-  }
-}
-.parallax-section {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
+    .hero p {
+        font-size: 1.2rem;
+        /* Tamaño de fuente más pequeño para móvil */
+    }
 }
 
-.parallax-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 120%; /* Altura extra para el efecto parallax */
-  background-image: url("assets/alga polimero.jpg");
-  background-size: cover;
-  background-position: center;
-  transform: translateZ(-1px) scale(2);
-  z-index: -1;
+.container-fluid {
+    background-color: #01224500;
 }
 
-.parallax-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  color: white;
-  text-align: center;
+.bg-body-tertiary {
+    display: flex;
+    flex-direction: column;
 }
 
-.parallax {
-  position: relative;
-  overflow: hidden;
+.breadcrumb {
+    display: flex;
+    list-style: none;
 }
 
-.sobre-nosotros-container {
-  position: relative;
-  height: 100vh; /* Ajusta según tus necesidades */
-  perspective: 1px;
-  transform-style: preserve-3d;
+.d-inline-block {
+    align-items: center;
 }
 
-.sobre-nosotros-content {
-  position: relative;
-  padding: 50px;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Fondo semi-transparente para mejorar la legibilidad */
-  transform: translateZ(0);
+.breadcrumb a {
+    color: rgb(0, 44, 124);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
 }
+
+.breadcrumb a:hover {
+    color: rgb(224, 206, 206);
+    transition: color 0.3s ease;
+    text-decoration: underline;
+}
+
+
+/* Botones */
+
+.btn-buttons {
+    display: flex;
+    /* Cambiado a flex para centrar */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* Centrar los botones */
+    overflow: hidden;
+    /* Evitar desbordamiento */
+    gap: 30px;
+    font-family: 'Barlow', serif;
+}
+
+.btn-primary {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #007bff95;
+    /* Color de fondo del botón primario */
+    color: #0022ff;
+    /* Color del texto */
+    white-space: nowrap;
+    /* Evitar que el texto se divida */
+}
+
+.btn-primary:hover {
+    color: rgb(25, 0, 255);
+    background-color: #0056b3;
+    /* Color de fondo al pasar el mouse */
+}
+
+
+/* Sección Sobre Nosotros */
+
+.nosotros-container {
+    background: linear-gradient(to bottom, #69ff87, #95c3ca);
+    /* Degradado de izquierda a derecha */
+    height: 50%;
+    max-width: 100vw;
+    padding-top: 10%;
+    padding-left: 40px;
+    z-index: 1;
+}
+
+.nosotros-container h1 {
+    font-family: 'Barlow', serif;
+    font-weight: 500;
+    color: #2d425a;
+    font-size: 3.5rem;
+    margin-left: 10%;
+}
+
+.nosotros-container h2 {
+    font-size: 2.5rem;
+    padding-top: 0%;
+    margin-left: 10%;
+    text-align: left;
+    color: #073380;
+    margin-bottom: 20px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 200;
+}
+
+.nosotros-container h3 {
+    font-size: 1.5rem;
+    font-family: 'Barlow', serif;
+    color: white;
+    margin-left: 10%;
+}
+
+.nosotros-container p {
+    font-size: 1rem;
+    margin-right: 40%;
+    margin-left: 10%;
+}
+
+.container-bio {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Barlow', serif;
+    margin-left: 10%;
+}
+
+#fixed-word {
+    margin-right: 10px;
+    font-family: 'Barlow', serif;
+    color: blueviolet;
+    /* Espacio entre "BIO" y las palabras cambiantes */
+}
+
+
+/* Estilo para la nueva columna */
+
+.col.d-flex.flex-column.align-items-start.gap-2 {
+    margin-top: 10%;
+}
+
+.card.text-bg-dark {
+    background-color: #343a4000;
+    /* Color de fondo oscuro */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    height: 40%;
+}
+
+.card-img {
+    border-radius: 15px 15px 0 0;
+    width: auto;
+    height: 100%;
+    /* Bordes redondeados en la imagen */
+}
+
+.card-img-overlay {
+    padding: 30%;
+    width: 400px;
+    /* Espaciado interno */
+}
+
+.card-img-overlay h2 {
+    font-size: 80px;
+    font-weight: 600;
+    color: rgb(98, 187, 98);
+    text-shadow: 0 1px 2px rgba(10, 10, 10, 10);
+}
+
+.card-img-overlay p {
+    font: 90px;
+    color: #97ac2e;
+    font-family: 'Barlow', serif;
+    text-shadow: 1px 1px 2px rgba(1, 1, 1, 1);
+}
+
+
+/* Servicios de Laboratorio */
+
+.servicios {
+    background: linear-gradient(to bottom, #95c3ca, #296f51);
+    color: rgb(91, 156, 178);
+    padding: 40px 0;
+    z-index: 1;
+}
+
+.servicios h2 {
+    text-align: center;
+    margin-top: 10px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.servicios p {
+    text-align: center;
+    margin-bottom: 90px;
+    font-size: 1rem;
+    font-family: 'Barlow', serif;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+    gap: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: 'Barlow', serif;
+}
+
+.servicio-card {
+    background-color: rgba(0, 148, 150, 0.966);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'Barlow', serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.711);
+}
+
+.card text-bg-primary mb-3 {
+    max-width: 18rem;
+    font-family: 'Barlow', serif;
+}
+
+.card-body img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    font-family: 'Barlow', serif;
+}
+
+.card-header {
+    padding: 0px;
+    color: black;
+    font-family: 'Barlow', serif;
+}
+
+
+/* Biocápsulas */
+
+.biocapsulas {
+    background: linear-gradient(to bottom, #296f51, #0056b3);
+    /* Degradado de izquierda a derecha */
+    padding: 30px;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Barlow', serif;
+    margin-bottom: 0px;
+}
+
+.biocapsulas h2 {
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 3rem;
+    color: rgb(83, 204, 244);
+    font-family: "Barlow", sans-serif;
+    font-weight: 200;
+}
+
+.biocapsulas p {
+    text-align: center;
+    margin-bottom: 0px;
+    rgb(255,
+        255,
+        255);
+    font-family: 'Barlow', serif;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 468px) {}
+
+.feature-icon {
+    width: 1rem;
+    height: 1rem;
+    border-radius: .75rem;
+}
+
+.icon-square {
+    width: 2rem;
+    height: 2rem;
+    border-radius: .75rem;
+}
+
+.text-shadow-1 {
+    text-shadow: 0 .25rem .25rem rgba(0, 0, 0, .25);
+}
+
+.text-shadow-2 {
+    text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25);
+}
+
+.text-shadow-3 {
+    text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25);
+}
+
+.card-cover {
+    font-family: 'Barlow', serif;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: 4;
+}
+
+.feature-icon-small {
+    width: 1rem;
+    height: 1rem;
+}
+
+
+/* Pie de página */
+
 footer {
-  background-color: #333;
-  color: white;
-  padding: 10px 0;
-  text-align: center;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: 30%;
+    font-family: 'Barlow', serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: #010913;
+    padding: 0px 80px;
+    /* Añadir un poco de espacio */
 }
+
+.footer {
+    display: flex;
+    /* Cambiar a flexbox para alineación horizontal */
+    justify-content: center;
+    /* Espacio entre elementos */
+    align-items: center;
+    /* Centrar verticalmente */
+    padding: 0 0px;
+    /* Espaciado lateral */
+}
+
 .footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  color: white;
-  text-align: center;
+    flex: 1;
+    /* Permitir que el contenido ocupe espacio */
 }
-.logo-footer img {
-  width: 30%;
+
+.footer img {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    /* Ajustar el tamaño del logo */
 }
-.logo-jr img {
-  scrollbar-shadow-color: #13bb72;
-  width: 10%;
-  height: 10%;
+
+.footer a {
+    color: #2dfdb8;
+    /* Color de los enlaces */
+    margin: 0 px;
+    /* Espaciado entre enlaces */
+}
+
+.footer .social-icons {
+    display: flexbox;
+    /* Flexbox para iconos sociales */
+    justify-content: center;
+    /* Centrar iconos */
+    flex-direction: column;
+}
+
+.footer .social-icons a {
+    font-size: 40px;
+    margin: 0 20px 0px 20px;
+    /* Espaciado entre iconos */
+}
+
+.footer-content p {
+    color: #f2f630;
+    /* Color del texto */
+    font-size: 16px;
+    /* Tamaño de fuente */
+}
+
+
+/* Responsividad */
+
+@media (max-width: 768px) {
+    .biocapsulas-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 468px) {
+    .biocapsulas-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/*Seccion Contacto */
+
+.contacto {
+    font-family: 'Barlow', serif;
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to bottom, #1188ac6a, #015c3bc5);
+    background-size: cover;
+    color: white;
+}
+
+.contacto h1 {
+    color: rgb(16, 25, 196);
+    font-family: "Barlow", sans-serif;
+    font-size: 3rem;
+}
+
+.contacto p {
+    color: rgb(1, 65, 6);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario button {
+    color: rgb(0, 44, 124);
+    border-radius: 10px;
+    border: #314152;
+    padding: 5px 30px;
+    transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+    color: white;
+    background-color: #0022ff;
+}
+
+.formulario input,
+.formulario textarea {
+    margin: 10px 0;
+    padding: 10px;
+    width: 300px;
+}
+
+.redes-sociales {
+    margin-top: 20px;
+}
+
+.redes-sociales a {
+    margin: 0 10px;
+    color: rgb(27, 27, 234);
+    font-size: 34px;
+}
+
+
+/* Producto */
+
+.producto {
+    background: linear-gradient(to bottom, #67d5f6, #02383f);
+    color: rgb(1, 20, 164);
+    padding: 10px 0;
+}
+
+.producto h2 {
+    text-align: center;
+    margin-top: 1px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.producto p {
+    text-align: center;
+}
+
+.producto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.producto-imagen {
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.contenedor-img {
+    width: 100%;
+    height: auto;
+    display: grid;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.producto-overlay {
+    position: relative;
+    width: 70%;
+    border-radius: 15px;
+    bottom: 20px;
+    left: 20px;
+    right: 0px;
+    background-color: rgba(4, 62, 68, 0.333);
+    padding: 20px;
+    display: grid;
+    font-weight: 400x;
+    justify-content: space-around;
+}
+
+.producto-item {
+    font-weight: 600;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.producto-texto {
+    font-size: 2.5rem;
+    display: grid;
 }
