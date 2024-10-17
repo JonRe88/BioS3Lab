@@ -54,17 +54,47 @@
         .animation-3b span:nth-child(3) {
             color: #7ac142;
         }
+         .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .hero video {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+        }
+
+        .card {
+            margin: 10px;
+        }
     </style>
 </head>
 
 
 <body>
-    <main>
-        <!-- Video de fondo -->
-        <video autoplay loop muted class="background-video" src="assets/mentaspiner.mp4" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
-        </video>
-        <nav class="navbar">
+<header>
+           <nav class="navbar">
             <div class="container-fluid">
                 <img src="horizontal.svg" alt="BioS3 LAB Logo">
                 <ol class="breadcrumb">
@@ -75,16 +105,22 @@
                 </ol>
             </div>
         </nav>
+</header>
+          <main>
         <section class="hero">
-            <img src="VERTICAL.svg " alt="logo bios3bav " style="display: block; margin: 0 auto; ">
-            <p>Descubre cómo revolucionamos la nutrición y sostenibilidad .</p>
-            <div class="btn-buttons ">
-                <a class="btn btn-primary " href="contacto.html " role="button ">¡Contáctanos!</a>
-                <button type="button " class="btn btn-outline-primary " onclick="location.href='producto.html' ">Ver
-                    Más</button>
+            <video autoplay loop muted class="background-video " src="mentaspiner.mp4 " type="video/mp4 ">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <div class="hero-content">
+                <img src="VERTICAL.svg " alt="logo bios3bav " style="display: block; margin: 0 auto; ">
+                <p>Descubre cómo revolucionamos la nutrición y sostenibilidad.</p>
+                <div class="btn-buttons">
+                    <a class="btn btn-primary " href="contacto.html " role="button ">¡Contáctanos!</a>
+                    <button type="button " class="btn btn-outline-primary " onclick="location.href='producto.html' ">Ver
+                        Más</button>
+                </div>
             </div>
         </section>
-
         <div class="nosotros-container">
             <h1>Sobre BioS3LAB:</h1>
             <div class="row row-cols-1 row-cols-1 ">
@@ -117,41 +153,50 @@
             </div>  <!-- Añadir la animación 3B aquí -->
         </div>
     
-        <section class=" servicios ">
-            <h2>Servicios de Laboratorio </h2>
-            <p>Descubre cómo nuestros servicios de laboratorio pueden mejorar la calidad de tus productos y reducir
-                costos.
-            </p>
-            <div class=" servicios-grid ">
-                <div class=" card text-bg-primary mb-3 ">
-                    <div class=" card-header ">Servicio 1 </div>
-                    <div class=" card-body ">
-                        <img src=" alimento.png " alt=" Servicio 1 ">
-                        <p class=" card-text ">Descripción del servicio 1</p>
+         <section class="servicios ">
+            <div class=" container px-4 py-5 " id=" custom-cards ">
+                <h2 class=" pb-2 border-bottom ">Servicios de Laboratorio</h2>
+                <p>Descubre cómo nuestros servicios de laboratorio pueden mejorar la calidad de tus productos y reducir
+                    costos.
+                </p>
+                <div class="container px-4 py-5 " id="custom-cards ">
+                    <div class=" row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-4 ">
+                        <div class="col ">
+                            <div class=" card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg ">
+                                <img src="alga matraz.png " class=" img-fluid " alt="Descripción de la imagen ">
+                                <div class=" d-flex flex-column h-100 p-2 pb-1 text-white text-shadow-1 ">
+                                    <h3 class=" pt-1 mt-4 mb-4 display-6 lh-1 fw-bold ">Servicio 1</h3>
+                                    <p class=" card-text ">Descripción del servicio 1</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col ">
+                            <div class=" card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg ">
+                                <div class=" d-flex flex-column h-100 p-2 pb-1 text-white text-shadow-1 ">
+                                    <h3 class=" pt-1 mt-4 mb-4 display-6 lh-1 fw-bold ">Servicio 2</h3>
+                                    <p class=" card-text ">Descripción del servicio 2</p>
+                                </div>
+
+                                <img src="alga planta.jpg " class="img-fluid " alt="Descripción de la imagen ">
+
+                            </div>
+                        </div>
+                        <div class=" col ">
+                            <div class=" card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg ">
+                                <img src="alga polimero.jpg " class="img-fluid " alt="Descripción de la imagen ">
+                                <div class=" d-flex flex-column h-100 p-2 pb-1 text-white text-shadow-1 ">
+                                    <h3 class=" pt-1 mt-4 mb-4 display-6 lh-1 fw-bold ">Servicio 3</h3>
+                                    <p class=" card-text ">Descripción del servicio 3</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class=" card text-bg-primary mb-3 ">
-                    <div class=" card-header "> Servicio 2</div>
-                    <div class=" card-body ">
-                        <img src=" alga vaso.jpg " alt=" Servicio 2 ">
-                        <p class=" card-text ">Descripción del servicio 2</p>
-                    </div>
-                </div>
-                <div class=" card text-bg-primary mb-3 ">
-                    <div class=" card-header "> Servicio 2</div>
-                    <div class=" card-body ">
-                        <img src=" alga polimero.jpg " alt=" Servicio 2 ">
-                        <p class=" card-text ">Descripción del servicio 2</p>
-                    </div>
-                </div>
-            </div>
         </section>
 
-
         <section class=" biocapsulas ">
-
             <div class=" container px-4 py-5 " id=" custom-cards ">
-                <h2 class=" pb-2 border-bottom ">Bio Capsulas </h2>
+                <h2 class=" pb-2 border-bottom ">Bio Capsulas</h2>
                 <p>Nuestro enfoque se basa en el desarrollo de microcápsulas creadas a partir de residuos y aguas
                     residuales, ayudando a reducir el impacto ambiental y contribuyendo a la seguridad alimentaria
                     global.
@@ -159,18 +204,17 @@
                 <div class=" row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5 ">
                     <div class=" col ">
                         <div class=" card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg "
-                            style=" background-image: url( 'bio1.png' ); ">
+                            style=" background-image: url( 'alga\ tubo.jpg' ); ">
                             <div class=" d-flex flex-column h-100 p-2 pb-1 text-white text-shadow-1 ">
-                                <h3 class=" pt-5 mt-5 mb-4 display-6 lh-1 fw-bold ">Bio Procesos</h3>
+                                <h3 class=" pt-5 mt-5 mb-5 display-6 lh-1 fw-bold ">Bio Procesos</h3>
                             </div>
                         </div>
                     </div>
                     <div class=" col ">
                         <div class=" card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg "
-                            style=" background-image: url( 'alimento.png' ); ">
+                            style=" background-image: url( 'raizelectrica.jpg' ); ">
                             <div class=" d-flex flex-column h-100 p-2 pb-1 text-shadow-1 ">
-                                <h3 class=" pt-5 mt-5 mb-4 display-6 lh-1 fw-bold ">Bio Energías</h3>
-                                </h3>
+                                <h3 class=" pt-5 mt-5 mb-5 display-6 lh-1 fw-bold ">Bio Energías</h3>
                             </div>
                         </div>
                     </div>
@@ -178,10 +222,12 @@
                         <div class=" card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg "
                             style=" background-image: url( 'alga matraz.png' ); ">
                             <div class=" d-flex flex-column h-100 p-2 pb-1 text-shadow-1 ">
-                                <h3 class=" pt-5 mt-5 mb-4 display-6 lh-1 fw-bold ">Bio Capsulas </h3>
+                                <h3 class=" pt-5 mt-5 mb-5 display-6 lh-1 fw-bold ">Bio Capsulas</h3>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -190,24 +236,18 @@
             <img src=" BioS3 Lab Logotipo H.png " alt=" Logo de Bios3Lab ">
             <div class=" social-icons ">
                 <a href=" https://www.facebook.com/profile.php?id=61567291610826 " title=" Visita Nuestra Página "><i
-                        class=" fa fa-facebook " aria-hidden="true"></i></a>
+                        class=" fa fa-facebook " aria-hidden=" true "></i></a>
                 <a href=" https://api.whatsapp.com/send/?phone=1525573476971 " title=" Envíanos un mensaje "><i
-                        class=" fa fa-whatsapp " aria-hidden="true"></i></a>
+                        class=" fa fa-whatsapp " aria-hidden=" true "></i></a>
             </div>
-           
-            <div class="footer-content">
+            <div class=" footer-content ">
                 <p>Hecho por Jony Reyes</p>
                 <p>© 2024 Bios3Lab. Todos los derechos reservados.</p>
             </div>
-
         </div>
     </footer>
     <script src=" script.js "></script>
-    <script async src=" https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js "
-        crossorigin=" anonymous "></script>
-    </script>
     <script>
-        // Añadir este script al final del body o en un archivo JavaScript separado
         function animateChars() {
             const chars = ['', '3', 'B'];
             const elements = [
