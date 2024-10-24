@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
-
 .root {
     --color-primario: #3b82f6;
     --color-secundario: #10b981;
@@ -9,12 +8,14 @@
     --color-primary: #06417c;
     --color-secondary: #cbf1de9a;
     --color-text: #ffffff;
-    --font-family: 'Barlow', serif;
+    --font-family: "Barlow", serif;
 }
 
-body,
 html {
-    color: var(--color-texto);
+    color: var(--color-fondo);
+    font-family: "Barlow", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -28,145 +29,72 @@ html {
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-    fill-opacity: rgb(80, 78, 78);
-    filter: brightness(55%);
+    filter: brightness(75%);
 }
 
-.main {
-    font-family: "Barlow", serif;
+header {
+    height: 100px;
+    background-color: #82404000;
 }
 
-
-/* Diseño de cuadrícula y flexbox */
-
-.container-fluid img {
-    width: 20%;
-    height: 30%;
-    display: flex;
-    font-family: "Barlow", serif;
+.body-emphasis {
+    height: 50vh;
 }
 
-.grid {
-    display: grid;
-    gap: 10px;
+.breadcrumb {
+    margin: 10px;
+    color: rgb(28, 31, 229);
+    align-items: center;
 }
 
-.flex {
-    display: flex;
-    justify-content: space-between;
+hero img {
     align-items: center;
 }
 
 
-/* Versión de escritorio */
+/* Estilos de la sección hero */
 
-.hero img {
+hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.nav img {
     align-items: center;
-    margin-top: 0%;
     height: auto;
-    width: 70%;
-    z-index: 1;
+    width: 15%;
+    margin-left: 70px;
 }
 
 .hero p {
-    font-family: 'Barlow', serif;
     text-align: center;
-    margin-top: 0%;
-    align-items: center;
-    flex-direction: column;
-    z-index: 1;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin: 0 20%;
     font-size: 2rem;
-    color: rgb(102, 140, 130);
+    color: rgba(126, 169, 209, 0.762);
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
 @media (max-width: 768px) {
     .hero p {
         font-size: 1.2rem;
-        /* Tamaño de fuente más pequeño para móvil */
     }
-}
-
-.container-fluid {
-    background-color: #01224500;
-}
-
-.bg-body-tertiary {
-    display: flex;
-    flex-direction: column;
-}
-
-.breadcrumb {
-    display: flex;
-    list-style: none;
-}
-
-.d-inline-block {
-    align-items: center;
-}
-
-.breadcrumb a {
-    color: rgb(0, 44, 124);
-    padding: 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.breadcrumb a:hover {
-    color: rgb(224, 206, 206);
-    transition: color 0.3s ease;
-    text-decoration: underline;
-}
-
-
-/* Botones */
-
-.btn-buttons {
-    display: flex;
-    /* Cambiado a flex para centrar */
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    /* Centrar los botones */
-    overflow: hidden;
-    /* Evitar desbordamiento */
-    gap: 30px;
-    font-family: 'Barlow', serif;
-}
-
-.btn-primary {
-    padding: 10px;
-    border-radius: 20px;
-    background-color: #007bff95;
-    /* Color de fondo del botón primario */
-    color: #0022ff;
-    /* Color del texto */
-    white-space: nowrap;
-    /* Evitar que el texto se divida */
-}
-
-.btn-primary:hover {
-    color: rgb(25, 0, 255);
-    background-color: #0056b3;
-    /* Color de fondo al pasar el mouse */
 }
 
 
 /* Sección Sobre Nosotros */
 
 .nosotros-container {
-    background: linear-gradient(to bottom, #69ff87, #95c3ca);
-    /* Degradado de izquierda a derecha */
+    background: linear-gradient(to bottom, #69ff87, #7cb4bd);
     height: 100%;
-    max-width: 100%;
-    padding-top: 10%;
-    padding-left: 10px;
+    padding: 10% 10px 0;
+}
+
+.nosotros-container img {
+    margin-left: 10%;
 }
 
 .nosotros-container h1 {
-    font-family: 'Barlow', serif;
     font-weight: 500;
     color: #2d425a;
     font-size: 3.5rem;
@@ -175,283 +103,120 @@ html {
 
 .nosotros-container h2 {
     font-size: 2.5rem;
-    padding-top: 0%;
-    margin-left: 10%;
-    text-align: left;
+    margin: 0 10% 20px;
     color: #073380;
-    margin-bottom: 20px;
-    font-family: "Barlow", sans-serif;
-    font-weight: 200;
 }
 
 .nosotros-container h3 {
     font-size: 1.5rem;
-    font-family: 'Barlow', serif;
     color: white;
     margin-left: 10%;
 }
 
 .nosotros-container p {
-    font-size: 1rem;
-    margin-right: 40%;
-    margin-left: 10%;
+    font-size: 1.3rem;
+    margin: 0% 10% 10% 10%;
+    text-align: justify;
 }
 
-.container-bio {
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    font-family: 'Barlow', serif;
-    margin-left: 10%;
-}
-
-#fixed-word {
-    margin-right: 10px;
-    font-family: 'Barlow', serif;
-    color: blueviolet;
-    /* Espacio entre "BIO" y las palabras cambiantes */
-}
-
-
-/* Estilo para la nueva columna */
-
-.col.d-flex.flex-column.align-items-start.gap-2 {
-    margin-top: 10%;
-}
-
-.card.text-bg-dark {
-    background-color: #343a4000;
-    /* Color de fondo oscuro */
-    border-radius: 15px;
-    /* Bordes redondeados */
-    height: 50%;
-}
-
-.card-img {
-    border-radius: 15px 15px 0 0;
-    width: auto;
-    height: 100%;
-    /* Bordes redondeados en la imagen */
-}
-
-.card-img-overlay {
-    padding: 30%;
-    width: 400px;
-    /* Espaciado interno */
-}
-
-.card-img-overlay h2 {
-    font-size: 80px;
+.container-bio #fixed-word {
+    margin-left: 25%;
     font-weight: 600;
-    color: rgb(98, 187, 98);
-    text-shadow: 0 1px 2px rgba(10, 10, 10, 10);
+    font-size: 48px;
+    color: rgb(0, 68, 255);
 }
 
-.card-img-overlay p {
-    font: 90px;
-    color: #97ac2e;
-    font-family: 'Barlow', serif;
-    text-shadow: 1px 1px 2px rgba(1, 1, 1, 1);
+.container-bio #changing-word {
+    font-weight: 600;
+    font-size: 48px;
+    color: rgb(1, 95, 44);
 }
 
 
-/* Servicios de Laboratorio */
+/* Estilos de los botones */
+
+.btn-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: 50px;
+    border-radius: 40px;
+}
+
+.btn-primary {
+    padding: 20px;
+    background-color: #0df443de;
+    color: #0022ff;
+    white-space: nowrap;
+}
+
+.btn-primary:hover {
+    color: rgb(25, 0, 255);
+    background-color: #0056b3;
+}
+
+
+/* Sección Servicios */
 
 .servicios {
-    background: linear-gradient(to bottom, #95c3ca, #296f51);
+    background: linear-gradient(to bottom, #7cb4bd, #296f51);
     color: rgb(91, 156, 178);
-    padding: 0px 0;
+    padding: 0;
 }
 
 .servicios h2 {
-    text-align: center;
     margin-top: 10px;
-    font-family: "Barlow", sans-serif;
-    font-weight: 300;
     font-size: 3rem;
+    color: #0056b3;
 }
 
 .servicios p {
-    text-align: center;
-    color: #10b981;
-    margin-bottom: 90px;
-    font-size: 1.5rem;
-    font-family: 'Barlow', serif;
-    text-shadow: 1px 1px 2px rgba(1, 1, 1, 1);
+    text-align: justify;
+    color: #2d302f;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
 }
 
-.servicios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
-    gap: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-family: 'Barlow', serif;
-}
-
-.servicio-card {
-    background-color: rgba(0, 148, 150, 0.966);
-    border-radius: 10px;
-    overflow: hidden;
-    font-family: 'Barlow', serif;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.711);
-}
-
-.card text-bg-primary mb-3 {
-    max-width: 20px;
-    font-family: 'Barlow', serif;
-}
-
-.card-body img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    font-family: 'Barlow', serif;
-}
-
-.card-header {
-    padding: 0px;
-    color: black;
-    font-family: 'Barlow', serif;
-}
-
-
-/* Biocápsulas */
-
-.Biocápsulas {
-    background: linear-gradient(to bottom, #296f51, #0056b3);
-    /* Degradado de izquierda a derecha */
-    padding: 30px;
-    height: 100vh;
-    overflow: hidden;
-    font-family: 'Barlow', serif;
-    margin-bottom: 0px;
+.biocapsulas {
+    background: linear-gradient(to bottom, #296f51, #343a40);
 }
 
 .biocapsulas h2 {
-    text-align: center;
-    margin-bottom: 0px;
     font-size: 3rem;
-    color: rgb(83, 204, 244);
-    font-family: "Barlow", sans-serif;
-    font-weight: 200;
+    color: #02eb9d
 }
 
 .biocapsulas p {
-    text-align: center;
-    margin-bottom: 0px;
-    color: rgb(83, 204, 244);
-    font-family: 'Barlow', serif;
-    font-size: 1.5rem;
-}
-
-@media (max-width: 468px) {}
-
-.feature-icon {
-    width: 1rem;
-    height: 1rem;
-    border-radius: .75rem;
-}
-
-.icon-square {
-    width: 2rem;
-    height: 2rem;
-    border-radius: .75rem;
-}
-
-.text-shadow-1 {
-    text-shadow: 0 .25rem .25rem rgba(0, 0, 0, .25);
-}
-
-.text-shadow-2 {
-    text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25);
-}
-
-.text-shadow-3 {
-    text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25);
-}
-
-.card-cover {
-    font-family: 'Barlow', serif;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    z-index: 4;
-}
-
-.feature-icon-small {
-    width: 1rem;
-    height: 1rem;
+    font-size: 1.3rem;
+    color: #e0e9e6
 }
 
 
-/* Pie de página */
-
-footer {
-    font-family: 'Barlow', serif;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    background-color: #010913;
-    padding: 0px 80px;
-    /* Añadir un poco de espacio */
-}
+/* Estilos del footer */
 
 .footer {
-    display: flex;
-    /* Cambiar a flexbox para alineación horizontal */
-    justify-content: center;
-    /* Espacio entre elementos */
-    align-items: center;
-    /* Centrar verticalmente */
-    padding: 0 0px;
-    /* Espaciado lateral */
-}
-
-.footer-content {
-    flex: 1;
-    /* Permitir que el contenido ocupe espacio */
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 .footer img {
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-    /* Ajustar el tamaño del logo */
+    max-width: 100px;
+    margin-bottom: 10px;
 }
 
 .footer a {
     color: #2dfdb8;
-    /* Color de los enlaces */
-    margin: 0 px;
-    /* Espaciado entre enlaces */
+    margin: 0;
 }
 
 .footer .social-icons {
-    display: flexbox;
-    /* Flexbox para iconos sociales */
-    justify-content: center;
-    /* Centrar iconos */
-    flex-direction: column;
-}
-
-.footer .social-icons a {
-    font-size: 36px;
-    margin: 0 20px 0px 20px;
-    /* Espaciado entre iconos */
-}
-
-.footer-content p {
-    color: #f2f630;
-    /* Color del texto */
-    font-size: 12px;
-    overflow: auto;
-    /* Tamaño de fuente */
-}
-
-.footer img {
     display: flex;
-    flex-direction: column;
-    width: 250px;
+    justify-content: center;
+    gap: 10px;
 }
 
 
@@ -461,147 +226,13 @@ footer {
     .biocapsulas-grid {
         grid-template-columns: repeat(5, 1fr);
     }
+    .nosotros-container {
+        padding: 10px;
+    }
 }
 
 @media (max-width: 468px) {
     .biocapsulas-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-}
-
-
-/*Sección Contacto */
-
-.contacto {
-    font-family: 'Barlow', serif;
-    text-align: center;
-    padding: 50px;
-    background: linear-gradient(to bottom, #1188ac6a, #015c3bc5);
-    background-size: cover;
-    color: white;
-}
-
-.contacto h1 {
-    color: rgb(16, 25, 196);
-    font-family: "Barlow", sans-serif;
-    font-size: 3rem;
-}
-
-.contacto p {
-    color: rgb(1, 65, 6);
-}
-
-.formulario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.formulario button {
-    color: rgb(0, 44, 124);
-    border-radius: 10px;
-    border: #314152;
-    padding: 5px 30px;
-    transition: background-color 0.3s;
-}
-
-.formulario button:hover {
-    color: white;
-    background-color: #0022ff;
-}
-
-.formulario input,
-.formulario textarea {
-    margin: 10px 0;
-    padding: 10px;
-    width: 300px;
-}
-
-.redes-sociales {
-    margin-top: 20px;
-}
-
-.redes-sociales a {
-    margin: 0 10px;
-    color: rgb(27, 27, 234);
-    font-size: 34px;
-}
-
-
-/* Producto */
-
-.producto {
-    background: linear-gradient(to bottom, #67d5f6, #02383f);
-    color: rgb(1, 20, 164);
-    padding: 10px 0;
-}
-
-.producto h2 {
-    text-align: center;
-    margin-top: 1px;
-    font-family: "Barlow", sans-serif;
-    font-weight: 300;
-    font-size: 3rem;
-}
-
-.producto p {
-    text-align: center;
-}
-
-.producto-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-.producto-imagen {
-    margin-top: 10px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 40px;
-}
-
-.contenedor-img {
-    width: 100%;
-    height: auto;
-    display: grid;
-    border-radius: 15px;
-    object-fit: cover;
-}
-
-.producto-overlay {
-    position: relative;
-    width: 70%;
-    border-radius: 15px;
-    bottom: 20px;
-    left: 20px;
-    right: 0px;
-    background-color: rgba(4, 62, 68, 0.333);
-    padding: 20px;
-    display: grid;
-    font-weight: 400x;
-    justify-content: space-around;
-}
-
-.producto-item {
-    font-weight: 600;
-    text-align: center;
-    color: rgb(255, 255, 255);
-}
-
-.producto-texto {
-    font-size: 2.5rem;
-    display: grid;
-}
-
-
-/* Asegurando un buen contraste para el título */
-
-.pb-2 {
-    color: #ffffff;
-    /* Color de texto blanco */
-    background-color: #343a40;
-    /* Color de fondo oscuro */
 }
