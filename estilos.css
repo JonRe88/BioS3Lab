@@ -1,238 +1,192 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
-.root {
-    --color-primario: #3b82f6;
-    --color-secundario: #10b981;
-    --color-fondo: #f3f4f6;
-    --color-texto: #1f2937;
-    --color-primary: #06417c;
-    --color-secondary: #cbf1de9a;
-    --color-text: #ffffff;
-    --font-family: "Barlow", serif;
-}
-
-html {
-    color: var(--color-fondo);
-    font-family: "Barlow", sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-
-/* Video de fondo */
-
-.background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
-    filter: brightness(75%);
-}
-
-header {
-    height: 100px;
-    background-color: #82404000;
-}
-
-.body-emphasis {
-    height: 50vh;
-}
-
-.breadcrumb {
-    margin: 10px;
-    color: rgb(28, 31, 229);
-    align-items: center;
-}
-
-hero img {
-    align-items: center;
-}
-
-
-/* Estilos de la sección hero */
-
-hero {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.nav img {
-    align-items: center;
-    height: auto;
-    width: 15%;
-    margin-left: 70px;
-}
-
-.hero p {
-    text-align: center;
-    margin: 0 20%;
-    font-size: 2rem;
-    color: rgba(126, 169, 209, 0.762);
-    text-shadow: 2px 2px 2px rgb(0, 0, 0);
-}
-
-@media (max-width: 768px) {
-    .hero p {
-        font-size: 1.2rem;
-    }
-}
-
-
-/* Sección Sobre Nosotros */
-
-.nosotros-container {
-    background: linear-gradient(to bottom, #69ff87, #7cb4bd);
-    height: 100%;
-    padding: 10% 10px 0;
-}
-
-.nosotros-container img {
-    margin-left: 10%;
-}
-
-.nosotros-container h1 {
-    font-weight: 500;
-    color: #2d425a;
-    font-size: 3.5rem;
-    margin-left: 10%;
-}
-
-.nosotros-container h2 {
-    font-size: 2.5rem;
-    margin: 0 10% 20px;
-    color: #073380;
-}
-
-.nosotros-container h3 {
-    font-size: 1.5rem;
-    color: white;
-    margin-left: 10%;
-}
-
-.nosotros-container p {
-    font-size: 1.3rem;
-    margin: 0% 10% 10% 10%;
-    text-align: justify;
-}
-
-.container-bio #fixed-word {
-    margin-left: 25%;
-    font-weight: 600;
-    font-size: 48px;
-    color: rgb(0, 68, 255);
-}
-
-.container-bio #changing-word {
-    font-weight: 600;
-    font-size: 48px;
-    color: rgb(1, 95, 44);
-}
-
-
-/* Estilos de los botones */
-
-.btn-buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    gap: 50px;
-    border-radius: 40px;
-}
-
-.btn-primary {
-    padding: 20px;
-    background-color: #0df443de;
-    color: #0022ff;
-    white-space: nowrap;
-}
-
-.btn-primary:hover {
-    color: rgb(25, 0, 255);
-    background-color: #0056b3;
-}
-
-
-/* Sección Servicios */
-
-.servicios {
-    background: linear-gradient(to bottom, #7cb4bd, #296f51);
-    color: rgb(91, 156, 178);
-    padding: 0;
-}
-
-.servicios h2 {
-    margin-top: 10px;
-    font-size: 3rem;
-    color: #0056b3;
-}
-
-.servicios p {
-    text-align: justify;
-    color: #2d302f;
-    margin-bottom: 10px;
-    font-size: 1.3rem;
-}
-
-.biocapsulas {
-    background: linear-gradient(to bottom, #296f51, #343a40);
-}
-
-.biocapsulas h2 {
-    font-size: 3rem;
-    color: #02eb9d
-}
-
-.biocapsulas p {
-    font-size: 1.3rem;
-    color: #e0e9e6
-}
-
-
-/* Estilos del footer */
-
-.footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.footer img {
-    max-width: 100px;
-    margin-bottom: 10px;
-}
-
-.footer a {
-    color: #2dfdb8;
-    margin: 0;
-}
-
-.footer .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-
-/* Responsividad */
-
-@media (max-width: 768px) {
-    .biocapsulas-grid {
-        grid-template-columns: repeat(5, 1fr);
-    }
-    .nosotros-container {
-        padding: 10px;
-    }
-}
-
-@media (max-width: 468px) {
-    .biocapsulas-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+            @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&display=swap");
+            @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+            .root {
+                --color-primario: #074ab5;
+                --color-secundario: rgb(5, 87, 110);
+                --color-fondo: #f3f4f6;
+                --color-texto: #1f2937;
+                --color-primary: #002952;
+                --color-secondary: #0779409a;
+                --color-text: #ffffff;
+                --font-family: "Barlow", serif;
+            }
+            
+            main {
+                h1 {
+                    color: rgb(29, 46, 114);
+                    text-align: center;
+                    font-size: 3rem;
+                }
+                h2 {
+                    text-align: center;
+                    font-size: 2.5rem;
+                    font-weight: 200;
+                    color: rgb(0, 73, 43);
+                }
+                p {
+                    font-weight: 300;
+                    text-align: justify;
+                    font-size: 1.2rem;
+                    color: rgb(1, 7, 88);
+                }
+            }
+            
+            body {
+                font-family: Barlow, serif;
+                margin: 0;
+                padding: 0;
+                background-color: hsla(193, 82%, 65%, 0.959);
+            }
+            
+            .main-nav ul {
+                font-size: 15px;
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                list-style: none;
+                padding: 0;
+            }
+            
+            .main-nav .activo {
+                color: #5900ff;
+                /* Cambia este valor al color que desees */
+            }
+            
+            .main-nav a {
+                color: #000000;
+                text-decoration: none;
+                font-weight: 300;
+                transition: color 0.3s ease;
+            }
+            
+            .main-nav a:hover {
+                color: #6ebda0;
+                /* Color verde claro al pasar el mouse */
+            }
+            
+            header {
+                background-color: #00081000;
+                min-height: 8vh;
+                position: relative;
+                padding: 1rem;
+                color: #14000000;
+            }
+            
+            .background-video {
+                position: absolute;
+                width: 100%;
+                z-index: -1;
+            }
+            
+            .nosotros-container {
+                background: linear-gradient(to bottom, #456df3, #35d4a2);
+                height: 100%;
+                padding: 5% 10% 10% 10%;
+            }
+            
+            .container-bio {
+                margin: 1%;
+            }
+            
+            .container-bio #fixed-word {
+                align-items: center;
+                font-weight: 200;
+                font-size: 48px;
+                color: rgb(0, 68, 255);
+            }
+            
+            .container-bio #changing-word {
+                font-weight: 300;
+                font-size: 48px;
+                color: rgb(1, 95, 44);
+            }
+            /* Estilos de los botones */
+            
+            .btn-buttons {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                gap: 30px;
+                border-radius: 40px;
+                flex-wrap: wrap;
+            }
+            
+            .btn-primary {
+                padding: 20px;
+                background-color: #0df443de;
+                color: #0022ff;
+                white-space: nowrap;
+            }
+            
+            .btn-primary:hover {
+                color: rgb(3, 96, 98);
+                background-color: #0056b3;
+            }
+            /* Sección Servicios */
+            
+            .servicios {
+                background: linear-gradient(to bottom, #35d4a2, #38ba38);
+                color: rgb(91, 156, 178);
+                padding: 0px 10% 10% 10%;
+                text-align: center;
+                width: auto;
+            }
+            
+            .biocaps {
+                background: linear-gradient(to bottom, #38ba38, #343a40);
+                text-align: center;
+            }
+            /* Estilos del footer */
+            
+            .footer {
+                background-color: #00162d;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer img {
+                max-width: 100px;
+                margin-bottom: 10px;
+            }
+            
+            .footer a {
+                color: #2dfdb8;
+                margin: 0;
+            }
+            
+            .footer .social-icons {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+            }
+            /* Responsividad */
+            
+            .card {
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+            
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            }
+            
+            @media (max-width: 768px) {
+                .main-nav ul {
+                    flex-direction: column;
+                }
+                .nosotros-container {
+                    padding: 5% 5%;
+                }
+                .container-bio {
+                    margin: 2%;
+                }
+                .btn-primary {
+                    width: 100%;
+                }
+            }
