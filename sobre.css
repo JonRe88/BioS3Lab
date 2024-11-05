@@ -1,0 +1,79 @@
+/* Estilos para el contenido de la página */
+
+body {
+    font-family: 'Barlow', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+header {
+    background-image: url('alga esfera 1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 35vh;
+    position: relative;
+    padding: 2rem;
+    color: #fff;
+    filter: brightness(.80);
+}
+
+.hero-content h1 {
+    margin-top: 100px;
+    text-align: center;
+    color: rgb(20, 28, 70);
+    text-shadow: (20px, 10px, 10);
+}
+
+
+/* Navegación principal */
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    background-color: rgba(11, 50, 1, 0.718);
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+}
+.main-nav .activo {
+    color: #3fd9e4;
+    /* Cambia este valor al color que desees */
+}
+
+blockquote {
+    text-align: center;
+    font-style: italic;
+    margin: 20px;
+}
+
+
+/* Estilos de footer */
+
+.footer {
+    padding: 1em;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+
+.footer img {
+    width: 30%;
+}
+
+.social-icons a {
+    color: #08ab54;
+    margin: 0 5px;
+    font-size: 1.5rem;
+}
+
+.footer logo {
+    width: 30%;
+}
