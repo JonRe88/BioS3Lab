@@ -1,3 +1,29 @@
+// JavaScript para las transiciones de fotos
+document.addEventListener('scroll', function() {
+    const photos = document.querySelectorAll('.photo');
+    const windowHeight = window.innerHeight;
+
+    photos.forEach(photo => {
+        const rect = photo.getBoundingClientRect();
+        if (rect.top < windowHeight) {
+            photo.classList.add('visible');
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const biocapsSection = document.querySelector(".biocaps");
+
+    window.addEventListener("scroll", function() {
+        const sectionTop = biocapsSection.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight - 100) {
+            biocapsSection.classList.add("visible");
+        }
+    });
+});
+
 async function changeWords(params) {
     const words = ["tecnología", "procesos", "energía"];
     let index = 0;
@@ -23,13 +49,3 @@ async function changeWords(params) {
 
 // Invocar la función
 changeWords();
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
